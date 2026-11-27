@@ -66,7 +66,7 @@ function assert(cond, msg) {
 
   const boundary = ds.halfEdges.filter(h => h.opposite === null).length;
   console.log('Half-edges de borda:', boundary);
-  assert(boundary > 0, 'Bunny tem bordas abertas na base (esperado)');
+  assert(boundary > 0, 'Bunny tem bordas abertas na base ');
 
   assert(ds.vertices.length > 30000, 'Bunny com > 30k vértices');
 
@@ -75,7 +75,7 @@ function assert(cond, msg) {
     const len = Math.hypot(...v.normal);
     if (Math.abs(len - 1) > 1e-3) nonUnit++;
   }
-  assert(nonUnit === 0, `Todas as normais unitárias (inválidas: ${nonUnit})`);
+  assert(nonUnit === 0, `Todas as normais unitárias. Inválidas: ${nonUnit}`);
 
   const bbox = ds.computeBoundingBox();
   console.log('BBox min:', bbox.min);

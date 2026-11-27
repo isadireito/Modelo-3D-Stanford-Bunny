@@ -21,7 +21,7 @@ const newY = (lowestVertexY * scale) + ty;
 console.log("Y original mais baixo:", lowestVertexY);
 console.log("Y após a transformação:", newY);
 if (Math.abs(newY - 1.6) < 0.001) {
-  console.log("O coelho está apoiado exatamente no topo da mesa!");
+  console.log("O coelho está apoiado exatamente no topo da mesa");
 } else {
-  console.log("Erro no posicionamento.");
+  console.log("Erro no posicionamento");
 }
